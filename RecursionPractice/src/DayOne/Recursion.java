@@ -7,10 +7,15 @@ public class Recursion {
 
 	public static void main(String[] args) {
 //		System.out.println(Multiply(7,4));
-//		int [] a = {2,5,6,8,6,8,9,78,4,3,6,5,4,3};
+		int [] a = {1,0,1,0,1,0,1,0,1,0,1,0,1};
 //		System.out.println(LargeIt(a));
 //		System.out.println(displayRowOfCharacter("&", 9));
-		InputRange();
+//		InputRange();
+		//System.out.println(findMaxConsecutiveOnes(a));
+		String str = new String();
+		System.out.println(str);
+		
+		
 
 	}
 	
@@ -44,5 +49,19 @@ public class Recursion {
 		return num;
 	
 	}
+	public static int findMaxConsecutiveOnes(int[] nums) {
+        int maxCount=0;
+        int count = 0;
+        for(int num: nums){
+        	if(num == 1){
+                count++;
+                continue;
+            }
+            if(maxCount < count)
+                maxCount = count;
+            count=0; 
+        }
+        return maxCount;
+    }
 
 }
