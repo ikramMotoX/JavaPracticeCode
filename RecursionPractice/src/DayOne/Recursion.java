@@ -5,8 +5,11 @@ import java.util.Scanner;
 
 public class Recursion {
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
-//		System.out.println(Multiply(7,4));
+		/**System.out.println(Multiply(7,4));
 		int [] a = {1,0,1,0,1,0,1,0,1,0,1,0,1};
 //		System.out.println(LargeIt(a));
 //		System.out.println(displayRowOfCharacter("&", 9));
@@ -14,9 +17,35 @@ public class Recursion {
 		//System.out.println(findMaxConsecutiveOnes(a));
 		String str = new String();
 		System.out.println(str);
+		*/
+		T[] arr = [3,7,4,5,6,98,43,24,65,86,45,8,5];s
+		boolean t = inArray(arr,24));
+		
+		
 		
 		
 
+	}
+	public static <T> boolean inArray(T[] anArray, T anEntry) {
+		return searchElement(anArray, 0, anArray.length -1 , anEntry);
+	}
+	
+	/**
+	 * Recursive sequential search of an unsorted array
+	 */
+	public static <T> boolean searchElement(T[] arr, int first, int last, T element) {
+		
+		
+		boolean found;
+		if(first > last)
+			found = false;
+		else if(element.equals(arr[first]))
+			found = true;
+		else
+			found = searchElement(arr, first+1, last, element);
+		
+		return found;
+		
 	}
 	
 	public static int Multiply(int x, int y) {
